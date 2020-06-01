@@ -42,35 +42,9 @@ INSERT INTO account (account_mail_adresse, password,account_first_name, account_
   role_id INT NOT NULL
 );
 
-INSERT INTO authorization (authorization_title, authorization_description,authorization_url,role_id) VALUES
-  ('Create person', 'The creation of the person','/users/signup',3),
-  ('Find all Authorization', 'Find all Authorization','/authorization/all',3),
-  ('Create role', 'The creation of the role','/role',3),
-  ('Find all roles', 'Find all roles','/role/all',3),
-  ('Find all persons', 'Find all roles','/persons/all',1),
-  ('Find all persons', 'Find all roles','/persons/all',2),
-  ('Find all persons', 'Find all roles','/api-matrix/person/all',3),
-  ('Create event', 'Create Event','/api-eventmatrix/event',3),
-  ('Find all Events', 'Find all events','/api-eventmatrix/event/all',3),
-  ('Find all Events By Type', 'Find all Events by Type','/api-eventmatrix/event/all/type',3),
-  ('Creaye type Events', 'Creaye type Events','/api-eventmatrix/typeevents',3),
-  ('Find type Events By title', 'Find  type events by title','/api-eventmatrix/typeevents/title',3),
-  ('Find type Events By id', 'Find  type events by id','/api-eventmatrix/typesevents/id',3),
-  ('Find All Type Events', 'Find all type events','/api-eventmatrix/typeevents/all',3),
-  ('Create event', 'Create Event','/api-eventmatrix/event',6),
-  ('Find all Events', 'Find all events','/api-eventmatrix/event/all',6),
-  ('Find all Events By Type', 'Find all Events by Type','/api-eventmatrix/event/all/type',6),
-  ('Creaye type Events', 'Creaye type Events','/api-eventmatrix/typeevents',6),
-  ('Find type Events By title', 'Find  type events by title','/api-eventmatrix/typeevents/title',6),
-  ('Find type Events By id', 'Find  type events by id','/api-eventmatrix/typesevents/id',6),
-  ('Find All Type Events', 'Find all type events','/api-eventmatrix/typeevents/all',6)
-  ('Find all courses', 'Find all roles','/api-trainingmatrix/course/all',1),
-  ('Find all course types', 'Find all roles','/api-trainingmatrix/coursetype/all',1),
-  ('Find all interns', 'Find all roles','/api-trainingmatrix/intern/all',1),
-  ('Find all trainers', 'Find all roles','/api-trainingmatrix/trainer/all',6),
-  ('Find all courses', 'Find all roles','/api-trainingmatrix/course/all',6),
-  ('Find all course types', 'Find all roles','/api-trainingmatrix/coursetype/all',6),
-  ('Find all interns', 'Find all roles','/api-trainingmatrix/intern/all',6),
-  ('Find all trainers', 'Find all roles','/api-trainingmatrix/trainer/all',6);
+    INSERT INTO authorization (authorization_title, authorization_description,authorization_url,role_id) VALUES
+      ('Find all answer', 'Find all roles', '/qcm-app-v1/answer/all',2),
+      ('Find all choice', 'Find all roles', '/qcm-app-v1/choice/all',2),
+      ('Find all question', 'Find all roles', '/qcm-app-v1/question/all',2);
 
 
