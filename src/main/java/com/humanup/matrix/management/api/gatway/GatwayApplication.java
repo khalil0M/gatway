@@ -8,14 +8,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 @EnableZuulProxy
 @EnableDiscoveryClient
+@EnableAspectJAutoProxy
 public class GatwayApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GatwayApplication.class, args);
+	}
+
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder(); // For encrypting user password
 	}
 
 	@Bean
@@ -28,5 +36,6 @@ public class GatwayApplication {
 		return new AccessLogFilter();
 
 	}
+
 }
 
